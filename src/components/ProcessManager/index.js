@@ -24,29 +24,6 @@ export const InputContainer = styled.input`
     border-bottom: ${props => !props.noBorder && '1px solid #d7d7d7'};
 `;
 
-const Process = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
-    background: #fff;
-    border-bottom: 1px solid #d7d7d7;
-    &:last-child {
-        border-bottom: none;
-    }
-`;
-
-const Action = styled.div`
-    display: flex;
-    padding: 5px;
-    border: ${props => props.showBorder && '1px solid #d7d7d7'};
-    border-radius: 2px;
-    width: 30px;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-`;
-
 const ButtonContainer = styled.div`
     display: flex;
     width: 500px;
@@ -114,7 +91,7 @@ const ProcessManager = () => {
             </Container>
             {!!processes.length && (
                 <ButtonContainer>
-                    <Button className="center" onClick={() => setJSON({ data: processes })}>
+                    <Button className="center pointer" onClick={() => setJSON({ data: processes })}>
                         Create JSON
                     </Button>
                 </ButtonContainer>

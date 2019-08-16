@@ -51,7 +51,6 @@ const ProcessDetail = ({ data, deleteProcess, addChildren, updateProcess }) => {
                         </span>
                     ) : (
                         <InputContainer
-                            noBorder
                             autoFocus
                             value={parentInp}
                             onChange={e => setParentInp(e.target.value)}
